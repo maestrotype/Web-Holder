@@ -1,0 +1,141 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+//First screen styles
+
+.toggle-mnu
+	height: 28px
+	width: 38px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	float: left
+	position: relative
+	margin-right: 21px
+	cursor: pointer
+	.centr-line
+		background-color: $accent
+		height: 3px
+		display: block
+		&:after
+			content: ""
+			height: 3px
+			background-color: $accent
+			width: 38px
+			display: block
+			position: absolute
+			top: 0px
+		&:before
+			content: ""
+			height: 3px
+			background-color: $accent
+			width: 38px
+			display: block
+			position: absolute
+			bottom: 0px	
+.cross
+	.centr-line
+		transform: rotate(45deg)
+		&:before
+			content: ""
+			height: 3px
+			background-color: $accent
+			width: 38px
+			display: block
+			transform: rotate(90deg)
+
+.dark 
+	background-color: #000
+	height: 100vh
+	// width: 0
+	// left: -1000px
+	transition-duration: 0.5s
+
+header 
+	background: url(../img/background.jpg) no-repeat
+	background-size: cover
+	height: 100vh
+	padding-top: 80px
+	transition-duration: 5s
+
+	nav
+		position: fixed
+		left: 0
+		top: 0
+		padding: 80px
+		height: 100vh
+		transition-duration: 0.5s
+
+		span
+			text-transform: uppercase
+			font-size: 1.6em
+			font-weight: 600
+			color: #fff
+			vertical-align: middle
+		
+		.wrap-logo
+			position: relative
+			display: inline-block
+			width: 152px
+			margin-left: 60px
+			.logo
+				font-size: 1.7em
+				font-family: Tahoma
+				font-weight: 100
+				color: #fff
+				margin-bottom: 100px
+				letter-spacing: 2px
+				span
+					background-color: $accent
+					font-size: inherit
+					font-weight: bold
+					text-transform: uppercase
+					color: $dark-color
+					margin-right: 2px
+					padding-left: 3px
+
+			ul
+				position: absolute
+				height: 0
+				display: none
+				left: -1500px
+				&.open
+					height: 100%
+					display: inline-block	
+					left: 0
+				li	
+					margin-bottom: 45px
+					a
+						text-transform: uppercase
+						color: #fefefe
+						font-size: 2em
+						transition-duration: 0.5s
+						&:before
+							content: ""
+							width: 10px
+							height: 10px
+							border: 3px solid $accent
+							display: none
+							margin-left: 10px
+							transition-duration: 0.5s
+						&:hover
+							text-decoration: none
+							&:before
+								display: inline-block		
+								margin-right: 20px
+								
+	
+	button
+		text-transform: uppercase
+		font-weight: 600
+		background-color: $accent
+		color: $dark-color
+		width: 276px
+		height: 46px
+		font-size: 1.6em
+		border: none
+		padding-right: 20px
+		float: right
+		span
+			font-weight: 800		
