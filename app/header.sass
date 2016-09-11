@@ -48,98 +48,126 @@
 .dark 
 	background-color: #000
 	height: 100vh
-	padding-right: 6.45%
+	padding-right: 80px
 	transition-duration: 0.5s
+
+.scrolldown
+	width: 70px
+	height: 70px
+	background-color: $accent
+	position: fixed
+	left: 80px
+	bottom: 80px	
 
 header 
 	background: url(../img/background.jpg) no-repeat
 	background-size: cover
-	height: 100vh
+	height: 120vh
 	
-	.top-header
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
-		aside
-			
-			nav
-				padding-top: 80px
-				padding-left: 6.45%
-				height: 100vh
-				transition-duration: 0.5s
-
-				span
-					text-transform: uppercase
-					font-size: 1.6em
-					font-weight: 600
-					color: #fff
+	.viewport
+		position: relative
+		height: 100vh
+		.top-header
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			aside
 				
-				.wrap-logo
-					position: relative
-					display: inline-block
-					width: 152px
-					margin-left: 60px
-					.logo
-						font-size: 2.4em
-						font-family: Tahoma
-						font-weight: 100
-						color: #fff
-						margin-bottom: 100px
-						letter-spacing: 2px
-						span
-							background-color: $accent
-							font-size: inherit
-							font-weight: bold
-							text-transform: uppercase
-							color: $dark-color
-							margin-right: 2px
-							padding-left: 3px
+				nav
+					padding-top: 80px
+					padding-left: 80px
+					height: 100vh
+					transition-duration: 0.5s
 
-					ul
-						position: absolute
-						height: 0
-						display: none
-						left: -1500px
-						&.open
-							height: 100%
-							display: inline-block	
-							left: 0
-						li	
-							margin-bottom: 45px
-							a
+					span
+						text-transform: uppercase
+						font-size: 1.6em
+						font-weight: 600
+						color: #fff
+					
+					.wrap-logo
+						position: relative
+						display: inline-block
+						width: 152px
+						margin-left: 60px
+						.logo
+							font-size: 2.4em
+							font-family: Tahoma
+							font-weight: 100
+							color: #fff
+							margin-bottom: 100px
+							letter-spacing: 2px
+							span
+								background-color: $accent
+								font-size: inherit
+								font-weight: bold
 								text-transform: uppercase
-								color: #fefefe
-								font-size: 2em
-								transition-duration: 0.5s
-								&:before
-									content: ""
-									width: 10px
-									height: 10px
-									border: 3px solid $accent
-									display: none
-									opacity: 0
+								color: $dark-color
+								margin-right: 2px
+								padding-left: 3px
+
+						ul
+							position: absolute
+							height: 0
+							display: none
+							left: -1500px
+							&.open
+								height: 100%
+								display: inline-block	
+								left: 0
+							li	
+								margin-bottom: 45px
+								a
+									text-transform: uppercase
+									color: #fefefe
+									font-size: 2em
 									transition-duration: 0.5s
-								&:hover
-									text-decoration: none
-									padding-left: 20px
 									&:before
-										opacity: 1
+										content: ""
 										width: 10px
-										display: inline-block		
-										margin: 0 20px 0 -20px
-									
-		.side-button
-			padding-right: 6.5%
-			padding-top: 80px
-			button
+										height: 10px
+										border: 3px solid $accent
+										display: none
+										opacity: 0
+										transition-duration: 0.5s
+									&:hover
+										text-decoration: none
+										padding-left: 20px
+										&:before
+											opacity: 1
+											width: 10px
+											display: inline-block		
+											margin: 0 20px 0 -20px
+										
+			.side-button
+				padding-right: 6.5%
+				padding-top: 80px
+				button
+					text-transform: uppercase
+					font-weight: 600
+					background-color: $accent
+					color: $dark-color
+					width: 276px
+					height: 46px
+					font-size: 1.6em
+					border: none
+					text-align: center
+					span
+						font-weight: 800
+
+		.start
+			width: 778px
+			height: 275px
+			background-color: $block-color
+			position: absolute
+			bottom: -20%
+			right: 80px
+			padding: 60px 56px 50px 43px
+			h3
+				color: $accent
+				font-size: 2.4em
 				text-transform: uppercase
-				font-weight: 600
-				background-color: $accent
-				color: $dark-color
-				width: 276px
-				height: 46px
-				font-size: 1.6em
-				border: none
-				text-align: center
-				span
-					font-weight: 800		
+				font-weight: 500
+				line-height: 1.2
+				strong
+					font-weight: 800						
