@@ -3,13 +3,95 @@
 @import "libs"
 
 //Custom styles here
-.who-we-are
+.who-we-are,.process
 	height: 100vh
 	border-bottom: 1px solid $accent
+	padding-top: 130px
+	padding-left: 80px
+
+	.title-block
+		h2
+			text-transform: uppercase
+			color: $accent
+			font-size: 3.4em
+	.block
+		background-color: $block-color
+		max-width: 774px
+		height: 400px
+		padding: 50px 60px 70px 38px
+		display: inline-block
+		position: relative
+		h3
+			font-size: 2.4em
+			text-transform: uppercase
+			color: $accent
+			line-height: 1.2
+			span
+				color: #FFF
+		p
+			font-size: 1.6em
+			color: #fff
+			font-weight: 300
+			margin: 35px 0
+			line-height: 1.5
+
+	.side-block
+		text-transform: uppercase
+		color: #fff
+		display: inline-block
+		h1
+			font-size: 4em
+			font-weight: 700
+		h2
+			color: #fff
+
 .process
 	height: 100vh
 footer
 	height: 294px
 	background-color: #FFF
+	padding: 0 80px
+	.top-footer
+		height: 175px
+		border-bottom: 4px solid $dark-color
+		aside
+			padding-top: 55px
+			display: inline-block
+		.left-side
+			padding-left: 52px
+			p
+				font-size: 3em
+				line-height: 1.4
+				color: $dark-color
+		.Contacts
+			float: right
+			text-align: right
+			color: $dark-color
+			h4
+				font-weight: 700
+				font-size: 3em
+				margin-bottom: 20px
+			p	
+				font-size: 1.6em
+				font-family: "Roboto"
+				line-height: 1.2
+				font-weight: 300
+	.bottom-footer
+		padding-top: 48px
+		display: flex
+		justify-content: space-between
+		aside
+			display: inline-block
+			span
+				font-size: 2em
+				color: $dark-color
+				font-weight: 500
+		.right-side
+			display: inline-block
+			float: right
+			font-size: 1.6em	
+			font-family: "Roboto"
+			font-weight: 300	
+				
 
 @import "media"
