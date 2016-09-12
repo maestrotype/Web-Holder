@@ -4,6 +4,7 @@ $(function() {
 		$(this).toggleClass("cross");
 		$("nav").toggleClass("dark");
 		$("ul").toggleClass("open");
+		$(".side-button").toggle();
 		// $(".dark").css("width","100%");
 	}
 		);
@@ -11,7 +12,7 @@ $(function() {
 	$(window).scroll(function() {
 
 		var st = $(this).scrollTop();
-
+		$(".scrolldown").css("opacity", "0.3");
 		$("header").css({
 			"transform" : "translate(0%, " + st/200 + "%"
 		});
@@ -21,7 +22,7 @@ $(function() {
 		});
 
 		$(".start").css({
-			"transform" : "translate(0%, " + -st/2 + "%" 
+			"transform" : "translate(0%, " + -st/4 + "%" 
 		});
 	});
 
