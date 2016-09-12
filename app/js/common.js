@@ -1,5 +1,13 @@
 $(function() {
 
+	$("#title-left").animated("bounceInLeft", "fadeOut");
+
+	$("#title-right").animated("bounceInRight", "fadeOut");
+
+	$("#left-block").animated("bounceInLeft", "fadeOut");
+
+	$("#right-block").animated("bounceInRight", "fadeOut");
+
 	$(".toggle-mnu").click( function() {
 		$(this).toggleClass("cross");
 		$("nav").toggleClass("dark");
