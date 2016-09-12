@@ -8,4 +8,21 @@ $(function() {
 	}
 		);
 
+	$(window).scroll(function() {
+
+		var st = $(this).scrollTop();
+
+		$("header").css({
+			"transform" : "translate(0%, " + st/200 + "%"
+		});
+
+		$(".viewport").css({
+			"transform" : "translate(0%, " + st/20 + "%"
+		});
+
+		$(".start").css({
+			"transform" : "translate(0%, " + -st/2 + "%" 
+		});
+	});
+
 });
