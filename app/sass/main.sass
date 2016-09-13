@@ -3,6 +3,9 @@
 @import "libs"
 
 //Custom styles here
+
+.rotate
+	transform: rotate(180deg)
 .who-we-are,.process
 	height: 100vh
 	display: flex
@@ -24,7 +27,7 @@
 		.block
 			background-color: $block-color
 			width: 100%
-			height: 400px
+			min-height: 400px
 			padding: 50px 60px 70px 38px
 			display: inline-block
 			position: relative
@@ -80,50 +83,58 @@
 	padding-left: 80px
 	padding-right: 80px
 footer
+	position: relative
+	overflow: hidden
 	height: 294px
-	background-color: #FFF
-	padding: 0 80px
-	.top-footer
-		height: 175px
-		border-bottom: 4px solid $dark-color
-		aside
-			padding-top: 55px
-			display: inline-block
-		.left-side
-			padding-left: 52px
-			p
-				font-size: 3em
-				line-height: 1.4
+	.inner-footer
+		position: absolute
+		width: 100%
+		padding: 300px 80px 0
+		transition-duration: 0.5s
+		top: -700px
+		height: 642px
+		background-color: #FFF
+		.top-footer
+			height: 175px
+			border-bottom: 4px solid $dark-color
+			aside
+				padding-top: 55px
+				display: inline-block
+			.left-side
+				padding-left: 52px
+				p
+					font-size: 3em
+					line-height: 1.4
+					color: $dark-color
+			.Contacts
+				float: right
+				text-align: right
 				color: $dark-color
-		.Contacts
-			float: right
-			text-align: right
-			color: $dark-color
-			h4
-				font-weight: 700
-				font-size: 3em
-				margin-bottom: 20px
-			p	
-				font-size: 1.6em
+				h4
+					font-weight: 700
+					font-size: 3em
+					margin-bottom: 20px
+				p	
+					font-size: 1.6em
+					font-family: "Roboto"
+					line-height: 1.2
+					font-weight: 300
+		.bottom-footer
+			padding-top: 48px
+			display: flex
+			justify-content: space-between
+			aside
+				display: inline-block
+				span
+					font-size: 2em
+					color: $dark-color
+					font-weight: 500
+			.right-side
+				display: inline-block
+				float: right
+				font-size: 1.6em	
 				font-family: "Roboto"
-				line-height: 1.2
-				font-weight: 300
-	.bottom-footer
-		padding-top: 48px
-		display: flex
-		justify-content: space-between
-		aside
-			display: inline-block
-			span
-				font-size: 2em
-				color: $dark-color
-				font-weight: 500
-		.right-side
-			display: inline-block
-			float: right
-			font-size: 1.6em	
-			font-family: "Roboto"
-			font-weight: 300	
+				font-weight: 300	
 				
 
 @import "media"

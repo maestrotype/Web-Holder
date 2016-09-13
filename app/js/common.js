@@ -1,5 +1,13 @@
 $(function() {
 
+	$("a#addText").click( function() {
+		var text = "<br /><br /> Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.";
+		$(".start p").append(text);
+
+		return false;
+	});
+
+
 	$("#title-left").animated("bounceInLeft", "fadeOut");
 
 	$("#title-right").animated("bounceInRight", "fadeOut");
@@ -12,15 +20,14 @@ $(function() {
 		$(this).toggleClass("cross");
 		$("nav").toggleClass("dark");
 		$("ul").toggleClass("open");
-		$(".side-button").toggle();
-		// $(".dark").css("width","100%");
+		$(".scrolldown").toggle();
 	}
 		);
 
 	$(window).scroll(function() {
 
 		var st = $(this).scrollTop();
-		$(".scrolldown").css("opacity", "0.3");
+		
 		$("header").css({
 			"transform" : "translate(0%, " + st/200 + "%"
 		});
@@ -31,6 +38,10 @@ $(function() {
 
 		$(".start").css({
 			"transform" : "translate(0%, " + -st/4 + "%" 
+		});
+
+		$(".inner-footer").css({
+			"transform" : "translate(0%, " + st/32 + "%" 
 		});
 	});
 
