@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready( function() {
 
 	// -- Scroll to id
 
@@ -31,24 +31,33 @@ $(function() {
 		$(".scrolldown").toggle();
 	}
 		);
+$(document).resize(function() {
+
+	if( $( document ).width() > 700 ) {
 
 	$(window).scroll(function() {
 
 		var st = $(this).scrollTop();
 
-		if(st > 1320) {
+
+		 if(st < 780) {
+			$("a.scrolldown").attr("href","#two");
+		}
+
+			else if(st > 780) {
+				$("a.scrolldown").attr("href","#three");
+			};
+			
+
+			if(st > 1920) {
 
 			$(".scrolldown").addClass("rotate");
 			$("a.scrolldown").attr("href","#one");
 
 		}
-
-		else if(st < 1280) {
+		else if(st < 1880) {
 			$(".scrolldown").removeClass("rotate");
 		};
-		 if(st < 780) {
-			$("a.scrolldown").attr("href","#two");
-		} ;
 		
 		$("header").css({
 			"transform" : "translate(0%, " + st/200 + "%"
@@ -66,5 +75,6 @@ $(function() {
 			"transform" : "translate(0%, " + st/32 + "%" 
 		});
 	});
-
+	}
+});
 });

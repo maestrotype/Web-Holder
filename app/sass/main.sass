@@ -97,8 +97,12 @@ footer
 		.top-footer
 			height: 175px
 			border-bottom: 4px solid $dark-color
+			vertical-align: middle
+			display: flex
+			justify-content: space-between
+			align-items: center
 			aside
-				padding-top: 55px
+				// padding-top: 55px
 				display: inline-block
 			.left-side
 				padding-left: 52px
@@ -106,6 +110,7 @@ footer
 					font-size: 3em
 					line-height: 1.4
 					color: $dark-color
+					font-weight: 700
 			.Contacts
 				float: right
 				text-align: right
@@ -120,15 +125,25 @@ footer
 					line-height: 1.2
 					font-weight: 300
 		.bottom-footer
-			padding-top: 48px
+			// padding-top: 48px
 			display: flex
 			justify-content: space-between
+			align-items: center
+			height: 116px
 			aside
 				display: inline-block
 				span
 					font-size: 2em
 					color: $dark-color
 					font-weight: 500
+					vertical-align: middle
+			.soc-icons
+				margin-left: 30px
+				display: inline-block	
+				ul
+					li	
+						display: inline-block
+						margin-right: 7px
 			.right-side
 				display: inline-block
 				float: right

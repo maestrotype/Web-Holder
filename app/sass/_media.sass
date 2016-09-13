@@ -11,14 +11,15 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-	
+	.scrolldown
+		display: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
 	.scrolldown
 		display: none
-		
+
 	header .viewport .top-header .side-button
 		text-align: center
 	header .viewport .top-header aside nav
@@ -33,6 +34,16 @@
 		width: 100vw
 		text-align: center
 		margin: 200px 0 -80px -80px	
+
+	.process, .who-we-are
+		flex-direction: column	
+
+	header .viewport .start
+		position: relative
+		width: 100%
+		padding: 60px 10px 50px
+		right: 0
+		bottom: -40%	
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
