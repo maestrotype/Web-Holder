@@ -12,13 +12,27 @@
 @media only screen and (max-width : 992px)
 	/**/
 	.scrolldown
-		display: none
+		visibility: hidden
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	.visible
+		display: block!important
+		visibility: visible!important
+		height: auto!important
+
 	.scrolldown
 		display: none
+
+	header .viewport .top-header aside .dark
+		padding-right: 0
+		margin-bottom: 50px	
+
+	header
+		background-size: auto
+		height: 100%
+		background-position: center center	
 
 	header .viewport .top-header .side-button
 		text-align: center
@@ -34,16 +48,75 @@
 		width: 100vw
 		text-align: center
 		margin: 200px 0 -80px -80px	
-
+	
+	.process,.who-we-are
+		height: 100%
 	.process, .who-we-are
 		flex-direction: column	
+		padding-top: 140%
+		width: 100%
+		padding: 0
+		margin-left: 0
+	
+	.process .side-block .block, .who-we-are .side-block .block
+		width: calc(100% - 30px)
+	
+	.who-we-are .title-block
+		margin-top: 180px
+
+	.process .title-block
+		margin-top: 80px	
+
+	.process .text-right	
+		margin-left: 10px
+		text-align: left
+		padding-left: 20px
+	#right-block
+		text-align: right
+	#title-left
+		order: 2
+		width: 100%
 
 	header .viewport .start
 		position: relative
 		width: 100%
 		padding: 60px 10px 50px
 		right: 0
-		bottom: -40%	
+		bottom: -16%
+	header .viewport .top-header aside nav .wrap-logo ul.open
+		width: 100%		
+
+	footer
+		position: static
+		height: 100%
+
+	footer .inner-footer
+		position: static
+		height: 100%
+		top: 0
+		padding-top: 20px
+
+
+	footer .inner-footer .top-footer
+		flex-direction: column
+		border: none		
+
+	footer .inner-footer .top-footer .left-side	
+		padding-left: 0
+		text-align: center
+	footer .inner-footer .top-footer .left-side p
+		width: 100vw
+		border-bottom: 4px solid $dark-color
+	footer .inner-footer .top-footer .Contacts
+		text-align: center
+		padding-top: 20px
+	footer .inner-footer .top-footer .Contacts p
+		text-align: center
+
+	footer .inner-footer .bottom-footer
+		flex-direction: column
+		margin-top: 70px
+		padding-bottom: 30px	
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
