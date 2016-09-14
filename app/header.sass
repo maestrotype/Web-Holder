@@ -56,11 +56,13 @@
 	height: 70px
 	background-color: $accent
 	position: fixed
+	color: $dark-color
 	left: 80px
 	bottom: 80px
 	text-align: center
 	cursor: pointer
 	transition-duration: 0.5s
+	z-index: 11
 	&:hover
 		background-color: $dark-color
 		span
@@ -70,8 +72,9 @@
 		font-size: 3em
 
 header 
-	background: url(../img/background.jpg) no-repeat 0 -100px
+	background: url(../img/background.png) no-repeat 0 -100px
 	background-size: cover
+	background-position: center
 	height: 130vh
 	position: relative
 	
@@ -101,6 +104,7 @@ header
 						display: inline-block
 						width: 152px
 						margin-left: 60px
+						cursor: pointer
 						.logo
 							font-size: 2.4em
 							font-family: Tahoma
@@ -149,6 +153,20 @@ header
 											width: 10px
 											display: inline-block		
 											margin: 0 20px 0 -20px
+							.languages
+								
+								ul
+									margin-top: 50px
+									li
+										display: inline-block
+										text-transform: uppercase
+										color: #fefefe
+										font-size: 2em
+										cursor: pointer
+										transition-duration: 0.5s
+										margin-right: 25px
+										&:hover,&:active
+											color: $accent				
 										
 			.side-button
 				padding-right: 6.5%

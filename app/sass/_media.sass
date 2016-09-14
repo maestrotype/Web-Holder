@@ -13,61 +13,77 @@
 	/**/
 	.scrolldown
 		visibility: hidden
+	.start
+		margin-left: 80px	
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
-	.visible
-		display: block!important
-		visibility: visible!important
-		height: auto!important
+	
+	// script[src*=js/scroll.js]	
 
 	.scrolldown
 		display: none
+	
+	header .viewport
+		height: 100%
 
 	header .viewport .top-header aside .dark
-		padding-right: 0
-		margin-bottom: 50px	
+		margin-bottom: 50px
+		width: 100vw
+
+	header .viewport .top-header aside nav.dark .wrap-logo
+		margin: 0		
+		width: 60%
+		display: inline-block
 
 	header
 		background-size: auto
 		height: 100%
-		background-position: center center	
+		background-position: center top	
 
 	header .viewport .top-header .side-button
 		text-align: center
+		padding: 0
+		margin: 20px auto 120px
 	header .viewport .top-header aside nav
 		height: 100%
 	header .viewport .top-header aside .dark
 		height: 100vh
-	header .viewport .top-header .side-button
-		padding: 0
-		margin: 0 auto
+		
 
 	header .viewport .top-header aside nav .wrap-logo
 		width: 100vw
 		text-align: center
 		margin: 200px 0 -80px -80px	
+		height: 20px
 	
-	.process,.who-we-are
+	.wrapper .process,.who-we-are
 		height: 100%
-	.process, .who-we-are
+	.wrapper .process, .who-we-are
 		flex-direction: column	
 		padding-top: 140%
 		width: 100%
 		padding: 0
 		margin-left: 0
+		// margin-top: 80px
 	
-	.process .side-block .block, .who-we-are .side-block .block
+	.wrapper .process .side-block .block, .who-we-are .side-block .block
 		width: calc(100% - 30px)
 	
 	.who-we-are .title-block
 		margin-top: 180px
 
-	.process .title-block
+	.wrapper .process .title-block
 		margin-top: 80px	
 
-	.process .text-right	
+	.wrapper .process
+		bottom: 380px	
+	.wrapper footer
+		height: 368px	
+	.wrapper footer .inner-footer .top-footer .left-side
+		padding-left: 0
+	.wrapper .process .text-right	
 		margin-left: 10px
 		text-align: left
 		padding-left: 20px
@@ -99,21 +115,24 @@
 
 	footer .inner-footer .top-footer
 		flex-direction: column
+	.wrapper footer .inner-footer .top-footer	
 		border: none		
-
-	footer .inner-footer .top-footer .left-side	
+	.wrapper footer .inner-footer .bottom-footer aside
+		width: 100vw
+		text-align: center
+	.wrapper footer .inner-footer .top-footer .left-side	
 		padding-left: 0
 		text-align: center
-	footer .inner-footer .top-footer .left-side p
+	.wrapper footer .inner-footer .top-footer .left-side p
 		width: 100vw
 		border-bottom: 4px solid $dark-color
-	footer .inner-footer .top-footer .Contacts
+	.wrapper footer .inner-footer .top-footer .Contacts
 		text-align: center
 		padding-top: 20px
-	footer .inner-footer .top-footer .Contacts p
+	.wrapper footer .inner-footer .top-footer .Contacts p
 		text-align: center
 
-	footer .inner-footer .bottom-footer
+	.wrapper footer .inner-footer .bottom-footer
 		flex-direction: column
 		margin-top: 70px
 		padding-bottom: 30px	
@@ -127,9 +146,9 @@
 		height: 100%
 	header .viewport .top-header aside .dark
 		height: 100vh
-	header .viewport .top-header .side-button
-		padding: 0
-		margin: 0 auto
+	
+	.start
+		margin-left: 0px	
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

@@ -29,6 +29,9 @@ $(document).ready(function() {
 		$("nav").toggleClass("dark");
 		$("ul").toggleClass("open");
 		$(".scrolldown").toggle();
+		if($(window).screen()) {
+			$(".side-button").toggle();
+		}	
 	}
 		);
 

@@ -55,6 +55,7 @@ gulp.task('libs', function() {
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/scroll2id/PageScroll2id.min.js',
+		// 'app/libs/enquire/dist/enquire.min.js',
 		
 		// 'app/libs/magnific-popup/magnific-popup.min.js'
 		])
