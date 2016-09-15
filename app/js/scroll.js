@@ -47,7 +47,7 @@ $(document).ready( function () {
 
 
 		$(".start").css({
-			"transform" : "translate(0%, " + -flag*st/4 + "%" 
+			"transform" : "translate(0%, " + -flag*st/2 + "px" 
 		});
 
 
@@ -58,17 +58,21 @@ $(document).ready( function () {
 };
 
 $(window).scroll(function() {
-
+			
 		var st = $(this).scrollTop();
-
-		if(st > 1280) {
+		
+		if(st > (topCoordSectionTwo + $("#two").height())) {
 			// $("#three").css("bottom", "294px");
+			 
+			console.log(st);
 			$("#three").css({
-
-			"transform" : "translate(0%, " + -flag*st/50 + "%" 
+			"bottom" : flag*(st - (topCoordSectionTwo + $("#two").height() - 194))		
+			// "transform" : "translate(0%, " + -flag*st/4 + "px" 
 		});
 
-		};
+
+
+		} ;
 
 
 		 if(st < 780) {
@@ -92,5 +96,44 @@ $(window).scroll(function() {
 		};
 		
 	});
+
+	//Функция просчета координат элемента
+
+function getCoords(e) {
+  // (1)
+  var box = e.getBoundingClientRect();
+
+  var body = document.body;
+  var docEl = document.documentElement;
+
+  // (2)
+  var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+  // (3)
+  var clientTop = docEl.clientTop || body.clientTop || 0;
+  var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+  // (4)
+  var top = box.top + scrollTop - clientTop;
+  var left = box.left + scrollLeft - clientLeft;
+
+  return {
+    top: top,
+    left: left
+  };
+}		
+
+// -- end
+var sectionTwo = document.getElementById("two");
+var topCoordSectionTwo = getCoords(sectionTwo).top;
+
+var sectionThree = document.getElementById("three");
+var topCoordSectionThree = getCoords(sectionThree).top;
+
+var sectionFour = document.getElementById("four");
+var topCoordSectionFour = getCoords(sectionFour).top;
+
+
 
 });

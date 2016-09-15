@@ -20,6 +20,7 @@
 	padding-left: 80px
 	padding-right: 80px
 	align-items: center
+	background-color: $dark-color
 	.title-block
 		margin-bottom: 46px
 		
@@ -81,8 +82,8 @@
 
 .wrapper
 	position: relative
-	height: calc(100vh + 294px)
-	
+	height: 100vh
+
 	.process
 		height: 100vh
 		display: flex
@@ -93,12 +94,15 @@
 		padding-left: 80px
 		padding-right: 80px
 		background-color: $dark-color
-		transition-duration: 0.5s
+		transition-duration: 3s
+		transition-delay: -1s
 	footer
-		position: absolute
+		position: fixed
 		height: 294px
 		width: 100%
 		bottom: 0
+		z-index: -1
+
 		.inner-footer
 			// position: absolute
 			width: 100%

@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 	// --EndAddText
 
-
+	
 	$("#title-left").animated("bounceInLeft", "fadeOut");
 
 	$("#title-right").animated("bounceInRight", "fadeOut");
@@ -23,6 +23,8 @@ $(document).ready(function() {
 	$("#left-block").animated("bounceInLeft", "fadeOut");
 
 	$("#right-block").animated("bounceInRight", "fadeOut");
+
+	// --click-menu
 
 	$(".toggle-mnu").click( function() {
 		$(this).toggleClass("cross");
@@ -35,4 +37,39 @@ $(document).ready(function() {
 	}
 		);
 
+	// --end-click
+	
+	//Функция просчета координат элемента
+
+function getCoords(e) {
+  // (1)
+  var box = e.getBoundingClientRect();
+
+  var body = document.body;
+  var docEl = document.documentElement;
+
+  // (2)
+  var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+  // (3)
+  var clientTop = docEl.clientTop || body.clientTop || 0;
+  var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+  // (4)
+  var top = box.top + scrollTop - clientTop;
+  var left = box.left + scrollLeft - clientLeft;
+
+  return {
+    top: top,
+    left: left
+  };
+}		
+
+// -- end
+var section = document.getElementById("two");
+var top_section = getCoords(section).bottom;
+
+
 });
+
