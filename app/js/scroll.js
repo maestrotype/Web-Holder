@@ -1,12 +1,12 @@
 $(document).ready( function () {
 
 	var flag;
-	if( $(this).width() > 700 ) {
+	if( $(this).width() > 800 ) {
    	parallax_run();
    } else parallax_stop();
 
 	$(window).resize(function(){
-   if( $(this).width() > 700 ) {
+   if( $(this).width() > 800 ) {
 
    	parallax_run();
    } else parallax_stop();
@@ -37,61 +37,66 @@ $(document).ready( function () {
 
 			var st = $(this).scrollTop();
 
-			$("header").css({
-			"transform" : "translate(0%, " + flag*st/200 + "%"
-		});
-
-		$(".viewport").css({
-			"transform" : "translate(0%, " + flag*st/20 + "%"
-		});
-
-
 		$(".start").css({
-			"transform" : "translate(0%, " + -flag*st/2 + "px" 
+			// "transform" : "translate(0%, " + -flag*st/2 + "px" 
+			"bottom" : flag*st
 		});
 
-
-		// $(".inner-footer").css({
-		// 	"transform" : "translate(0%, " + flag*st/32 + "%" 
-		// });
+		
 	});	
+
+		$(window).scroll(function() {
+
+			var st = $(this).scrollTop();
+
+			if(st > $("header").height()) {
+			$("header").css({ 
+			"bottom" : st - $("header").height()
+		});
+		}	
+			
+	});
 };
+	
+	
+				
 
 $(window).scroll(function() {
 			
 		var st = $(this).scrollTop();
+		console.log(st);
 		
 		if(st > (topCoordSectionTwo + $("#two").height())) {
 			// $("#three").css("bottom", "294px");
 			 
-			console.log(st);
-			$("#three").css({
+	
+			$(".wrapper").css({
 			"bottom" : flag*(st - (topCoordSectionTwo + $("#two").height() - 194))		
+			// "transform" : "translate(0%, " + -flag*st/4 + "px" 
+		});
+		} else $(".wrapper").css({
+			"bottom" : 0		
 			// "transform" : "translate(0%, " + -flag*st/4 + "px" 
 		});
 
 
-
-		} ;
-
-
-		 if(st < 780) {
+		 if(st < $("#two").height()) {
 			$("a.scrolldown").attr("href","#two");
 		}
 
-			else if(st > 780) {
+			else if(st > $("#two").height()) {
 				$("a.scrolldown").attr("href","#three");
 
 			};
 			
 
-			if(st > 1580) {
+			if(st > 2*($("#two").height())) {
 
 			$(".scrolldown").addClass("rotate");
 			$("a.scrolldown").attr("href","#one");
 
 		}
-		else if(st < 1580) {
+		else if(st < 2*($("#two").height())) {
 			$(".scrolldown").removeClass("rotate");
 		};
 		

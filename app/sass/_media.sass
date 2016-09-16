@@ -38,7 +38,7 @@
 		display: inline-block
 
 	header
-		background-size: auto
+		background-size: cover
 		height: 100%
 		background-position: center top	
 
@@ -49,11 +49,11 @@
 	header .viewport .top-header aside nav
 		height: 100%
 	header .viewport .top-header aside .dark
-		height: 100vh
+		height: 100%
 		
 
 	header .viewport .top-header aside nav .wrap-logo
-		width: 100vw
+		width: 90vw
 		text-align: center
 		margin: 200px auto 0
 		height: 20px
@@ -72,7 +72,7 @@
 		width: calc(100% - 30px)
 	
 	.who-we-are .title-block
-		margin-top: 180px
+		margin-top: 200px
 
 	.wrapper .process .title-block
 		margin-top: 80px	
@@ -95,8 +95,9 @@
 
 	header .viewport .start
 		position: relative
-		width: 100%
+		width: 100vw
 		padding: 60px 10px 50px
+		margin: 0 auto
 		right: 0
 		bottom: -16%
 	header .viewport .top-header aside nav .wrap-logo ul.open
@@ -105,6 +106,13 @@
 	footer
 		position: static
 		height: 100%
+
+	.wrapper
+		position: static
+	
+	.wrapper footer
+		position: relative
+		z-index: 1	
 
 	footer .inner-footer
 		position: static
@@ -140,19 +148,26 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	header
+		position: static	
 	header .viewport .top-header .side-button
 		text-align: center
 	header .viewport .top-header aside nav
 		height: 100%
-		padding: 80px 15px 0
+		padding: 20px 15px 0
 
 	header .viewport .top-header aside .dark
-		height: 100vh
+		height: 100%
 	
 	.start
 		margin-left: 0px
 	.wrapper
-		height: calc(100vh + 294px)		
+		position: static
+	
+	.wrapper footer
+		position: relative
+		z-index: 1
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

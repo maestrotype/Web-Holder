@@ -13,12 +13,13 @@
 .rotate
 	transform: rotate(180deg)
 .who-we-are,.process
-	height: 100vh
+	height: 100%
 	display: flex
 	justify-content: center
 	padding-top: 130px
 	padding-left: 80px
 	padding-right: 80px
+	padding-bottom: 80px
 	align-items: center
 	background-color: $dark-color
 	.title-block
@@ -82,10 +83,13 @@
 
 .wrapper
 	position: relative
-	height: 100vh
-
+	background-color: $dark-color
+	transition-duration: 3s
+	transition-delay: -1s
+	// top: 100vh
+	
 	.process
-		height: 100vh
+		height: 100%
 		display: flex
 		padding-left: 30px
 		width: 100%
@@ -93,9 +97,7 @@
 		padding-top: 130px
 		padding-left: 80px
 		padding-right: 80px
-		background-color: $dark-color
-		transition-duration: 3s
-		transition-delay: -1s
+		
 	footer
 		position: fixed
 		height: 294px
@@ -105,7 +107,7 @@
 
 		.inner-footer
 			// position: absolute
-			width: 100%
+			width: 100vw
 			padding: 0px 80px 0
 			transition-duration: 0.5s
 			// top: -700px
