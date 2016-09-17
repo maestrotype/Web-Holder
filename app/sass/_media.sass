@@ -13,8 +13,13 @@
 	/**/
 	.scrolldown
 		visibility: hidden
+	header
+		height: 100%	
+
 	.start
 		margin-left: 80px	
+	.start-section .blocks .projects, .start-section .blocks .team
+		margin: 90px auto	0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -80,7 +85,7 @@
 	.wrapper .process
 		bottom: 380px	
 	.wrapper footer
-		height: 368px	
+		// height: 368px	
 	.wrapper footer .inner-footer .top-footer .left-side
 		padding-left: 0
 	.wrapper .process .text-right	
@@ -97,7 +102,7 @@
 		position: relative
 		width: 100vw
 		padding: 60px 10px 50px
-		margin: 0 auto
+		margin: 200px auto 0
 		right: 0
 		bottom: -16%
 	header .viewport .top-header aside nav .wrap-logo ul.open
@@ -123,24 +128,24 @@
 
 	footer .inner-footer .top-footer
 		flex-direction: column
-	.wrapper footer .inner-footer .top-footer	
+	footer .inner-footer .top-footer	
 		border: none		
-	.wrapper footer .inner-footer .bottom-footer aside
+	footer .inner-footer .bottom-footer aside
 		width: 100vw
 		text-align: center
-	.wrapper footer .inner-footer .top-footer .left-side	
+	footer .inner-footer .top-footer .left-side	
 		padding-left: 0
 		text-align: center
-	.wrapper footer .inner-footer .top-footer .left-side p
+	footer .inner-footer .top-footer .left-side p
 		width: 100vw
 		border-bottom: 4px solid $dark-color
-	.wrapper footer .inner-footer .top-footer .Contacts
+	footer .inner-footer .top-footer .Contacts
 		text-align: center
 		padding-top: 20px
-	.wrapper footer .inner-footer .top-footer .Contacts p
+	footer .inner-footer .top-footer .Contacts p
 		text-align: center
 
-	.wrapper footer .inner-footer .bottom-footer
+	footer .inner-footer .bottom-footer
 		flex-direction: column
 		margin-top: 70px
 		padding-bottom: 30px	
@@ -159,6 +164,9 @@
 	header .viewport .top-header aside .dark
 		height: 100%
 	
+	header .top-header
+		height: auto
+		min-height: 210px
 	.start
 		margin-left: 0px
 	.wrapper

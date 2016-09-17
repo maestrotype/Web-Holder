@@ -1,13 +1,13 @@
 @import "bourbon"
 
-+font-face("icons", "../fonts/icons/icons", $file-formats: eot woff ttf svg)
+// +font-face("icons", "../fonts/icons/icons", $file-formats: eot woff ttf svg)
 
-// @font-face
-//   font-family: 'icons'
-//   src: url('fonts/icons.eot?p8dtna')
-//   src: url('fonts/icons.eot?p8dtna#iefix') format("embedded-opentype"), url('fonts/icons.ttf?p8dtna') format("truetype"), url('fonts/icons.woff?p8dtna') format("woff"), url('fonts/icons.svg?p8dtna#icons') format("svg")
-//   font-weight: normal
-//   font-style: normal
+@font-face
+  font-family: 'icons'
+  src: url('../fonts/icons/icons.eot?dsxxy')
+  src: url('../fonts/icons/icons.eot?dsxxy#iefix') format("embedded-opentype"), url('../fonts/icons/icons.ttf?dsxxy') format("truetype"), url('../fonts/icons/icons.woff?dsxxy') format("woff"), url('../fonts/icons/icons.svg?dsxxy#icons') format("svg")
+  font-weight: normal
+  font-style: normal
 
 
 [class^="icon-"], [class*=" icon-"]
@@ -23,52 +23,60 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-.icon-robot_y:before
-  content: "\e901"
+.icon-projects:before
+  content: "\e912"
 
-.icon-computer_y:before
-  content: "\e902"
-
-.icon-iphone_y:before
-  content: "\e903"
-
-.icon-device_y:before
-  content: "\e904"
-
-.icon-robot:before
-  content: "\e905"
-
-.icon-iphone:before
-  content: "\e906"
-
-.icon-computer:before
-  content: "\e907"
-
-.icon-device:before
-  content: "\e908"
+.icon-team:before
+  content: "\e913"
 
 .icon-attachment:before
-  content: "\e909"
+  content: "\e901"
 
-.icon-linkedin_transp
-  .path1:before
-    content: "\e90a"
-    color: rgb(0, 0, 0)
-  .path2:before
-    content: "\e90b"
-    margin-left: -1em
-    color: rgb(255, 255, 255)
+.icon-computer:before
+  content: "\e902"
+
+.icon-computer_y:before
+  content: "\e903"
+
+.icon-device:before
+  content: "\e904"
+
+.icon-device_y:before
+  content: "\e905"
 
 .icon-facebook
   .path1:before
-    content: "\e90c"
+    content: "\e906"
     color: rgb(0, 0, 0)
   .path2:before
-    content: "\e90d"
+    content: "\e907"
     margin-left: -1em
     color: rgb(255, 255, 255)
 
 .icon-instagram
+  .path1:before
+    content: "\e908"
+    color: rgb(0, 0, 0)
+  .path2:before
+    content: "\e909"
+    margin-left: -1em
+    color: rgb(255, 255, 255)
+  .path3:before
+    content: "\e90a"
+    margin-left: -1em
+    color: rgb(255, 255, 255)
+  .path4:before
+    content: "\e90b"
+    margin-left: -1em
+    color: rgb(255, 255, 255)
+
+.icon-iphone:before
+  content: "\e90c"
+
+.icon-iphone_y:before
+  content: "\e90d"
+
+.icon-linkedin_transp
   .path1:before
     content: "\e90e"
     color: rgb(0, 0, 0)
@@ -76,14 +84,12 @@
     content: "\e90f"
     margin-left: -1em
     color: rgb(255, 255, 255)
-  .path3:before
-    content: "\e910"
-    margin-left: -1em
-    color: rgb(255, 255, 255)
-  .path4:before
-    content: "\e911"
-    margin-left: -1em
-    color: rgb(255, 255, 255)
+
+.icon-robot:before
+  content: "\e910"
+
+.icon-robot_y:before
+  content: "\e911"
 
 .icon-arrow:before
   content: "\e900"

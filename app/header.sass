@@ -82,10 +82,11 @@
 		line-height: 70px
 		font-size: 3em
 
-header 
+.header-home-page	
 	background: url(../img/background.png) no-repeat
 	background-size: cover
-	background-position: center
+	background-position: center	
+header 
 	height: 100vh
 	width: 100%
 	// position: fixed
@@ -240,4 +241,60 @@ header
 				&.right-arrow	
 					margin-left: 10px
 					transform: rotate(270deg)
-					display: inline-block				
+					display: inline-block	
+
+ // -- For Page About Us	
+ 
+header 
+	.top-header
+		height: 210px
+	.title
+		text-align: center
+		h1
+			font-size: 3.4em
+			font-weight: 400
+			text-transform: uppercase
+			color: $accent	
+			margin-bottom: 18px
+		p	
+			font-size: 2em
+			color: #fff
+			font-weight: 300	
+	.slider
+		margin-top: 75px
+		
+		.container-slider
+			background: url(../img/slide-1.png)
+			margin: 0 auto
+			max-width: 1241px	
+			height: 401px	
+			position: relative	
+			.fogging
+				position: absolute
+				background-color: rgba(0, 0, 0, 0.7)
+				width: 100%
+				height: 100%
+				.cut
+					right: 30px
+					bottom: 30px
+				.text
+					position: absolute
+					right: 80px
+					bottom: 75px
+					text-align: right
+					h3
+						text-transform: uppercase
+						font-size: 2.4em
+						font-weight: 300
+						color: $accent
+						line-height: 1.2
+						span
+							font-weight: 800
+
+//  Person-team page		
+.header-our-team
+ 	height: 100% !important
+ 	.viewport
+ 		height: 100%							
+
+

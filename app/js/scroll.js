@@ -66,18 +66,17 @@ $(window).scroll(function() {
 		var st = $(this).scrollTop();
 		console.log(st);
 		
-		if(st > (topCoordSectionTwo + $("#two").height())) {
-			// $("#three").css("bottom", "294px");
+		if(st > 1400) {
 			 
-	
 			$(".wrapper").css({
-			"bottom" : flag*(st - (topCoordSectionTwo + $("#two").height() - 194))		
-			// "transform" : "translate(0%, " + -flag*st/4 + "px" 
+			"bottom" : 294		
 		});
-		} else $(".wrapper").css({
+		} else  {
+			$(".wrapper").css({
 			"bottom" : 0		
 			// "transform" : "translate(0%, " + -flag*st/4 + "px" 
-		});
+		})
+		};
 
 
 		 if(st < $("#two").height()) {
