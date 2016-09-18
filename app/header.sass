@@ -3,6 +3,9 @@
 @import "sass/base"
 
 //First screen styles
+
+
+
 .wrap-mnu
 	display: inline-block
 	.wrap-toggle__mnu
@@ -246,6 +249,7 @@ header
  // -- For Page About Us	
 
 .header-about-us 
+	height: 100%
 	.viewport
 		height: 100%
  
@@ -296,9 +300,103 @@ header
 							font-weight: 800
 
 //  Person-team page		
-.header-our-team
+header.header-our-team
 	height: 100%
 	.viewport-our-team
-		height: 100%					
+		height: 100%	
+
+// contact-us page
+header.header-contact-us
+	height: 100%
+	.viewport-contact-us
+		height: 100%
+		min-height: 380px	
+
+// services page	
+.header-services .viewport-services	
+	height: 100%
+.header-services
+	height: 100%
+	.slider
+		// margin-top: 75px		
+		.nav-services
+			margin: 0px auto
+			max-width: 1241px
+			ul
+				width: 100%
+				display: flex
+				// flex-wrap: wrap
+
+
+				.drop-list
+					display: inline-block
+					background-color: #FFF
+					height: 60px
+					width: 100%
+					text-align: center
+					vertical-align: middle	
+					position: relative
+					margin: 0 1px
+					cursor: pointer	
+					transition-duration: 0.5s
+					&.open
+						ul.sum-list
+							display: flex!important
+							height: 100%
+							li
+								height: 60px
+								transition-duration: 0.5s
+								display: block
+					&:hover
+						ul.sum-list
+							display: flex!important
+							height: 100%
+							
+					.icons
+						font-size: 3.2em
+						margin-right: 10px
+					span
+						font-size: 1.6em
+						text-transform: uppercase
+						font-weight: 800
+						color: $dark-color	
+						height: 100%
+						display: inline-block
+						line-height: 60px
+						vertical-align: middle
+					ul.sum-list	
+						position: absolute
+						flex-direction: column
+						z-index: 1
+						display: none
+						height: 0	
+
+						li
+							display: block
+							background-color: $block-color
+							position: relative
+							transition-duration: 0.5s
+							border-bottom: 1px solid #000
+							// transition-duration: 0.5s
+							// display: none
+							// height: 0px
+							&:hover
+								&:before
+									content: ""
+									position: absolute
+									height: 20px
+									width: 20px
+									display: inline-block
+									background-color: $accent
+									border: 4px solid $accent
+									transition-duration: 0.5s
+									left: 0
+									top: 20px
+							a
+								background-color: $block-color
+								color: #fff
+								line-height: 60px
+								font-size: 1.6em
+
 
 

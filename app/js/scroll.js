@@ -64,7 +64,7 @@ $(document).ready( function () {
 $(window).scroll(function() {
 			
 		var st = $(this).scrollTop();
-		console.log(st);
+		// console.log(st);
 		
 		if(st > 1400) {
 			 
