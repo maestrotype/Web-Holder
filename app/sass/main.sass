@@ -179,13 +179,30 @@ footer
 // About us page
 
 .start-section
-	margin-top: 60px
+	margin-top: 120px
 	.block
 		background-color: $block-color
 		max-width: 1241px
 		min-height: 430px
 		margin: 0 auto
 		padding: 58px 35px 50px
+		position: relative
+		.cut
+			top: -20px
+			right: -20px
+			width: 200px
+			height: 200px
+			border-top: 20px solid $accent
+			border-right: 20px solid $accent
+			border-bottom: none
+			position: absolute
+		h2
+			text-transform: uppercase
+			font-size: 3.4em
+			font-weight: 500
+			color: $accent
+			line-height: 1.2
+				
 		h3
 			text-transform: uppercase
 			font-size: 2.4em
@@ -195,11 +212,17 @@ footer
 			span
 				font-weight: 800
 		p
-			font-size: 16px
+			font-size: 1.6em
 			color: #fff
 			font-weight: 300
 			margin-top: 37px
 			line-height: 1.7
+			span
+				text-transform: uppercase
+				font-size: 1.2em
+				font-weight: 500
+				color: $accent
+				margin-right: 5px
 	.blocks
 		margin: 90px auto 120px	
 		max-width: 1241px
@@ -651,8 +674,78 @@ footer
 				color: $accent
 				background-color: $block-color
 
+ // -- portfolio page
 
-					
+.section-tabs
+	// max-width: 1241px
+	// margin: 0 auto
+	.ui-tabs
+		padding: 0
+		.ui-tabs-nav
+			margin: 0 auto 50px
+			max-width: 320px
+			display: flex
+
+			.ui-tabs-tab	
+				&.ui-tabs-active
+					a
+						color: $accent
+				.ui-tabs-anchor
+					text-transform: uppercase
+					font-size: 1.6em
+					color: #fff
+					font-weight: 500
+					transition-duration: 0.5s
+					&:hover
+						color: $accent
+		.wrap-projects
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			.project
+				width: 350px
+				position: relative
+				&:hover
+					.hover-project
+						opacity: 1
+
+				.hover-project
+					opacity: 0
+					position: absolute
+					height: 100%
+					width: 100%
+					background-color: rgba(192,192,38,0.8)
+					z-index: 9
+					top: 0
+					display: flex
+					align-items: end
+					padding: 30px
+					transition-duration: 0.5s
+					cursor: pointer
+					.text
+						span
+							display: block
+							font-size: 3.2em
+							margin-bottom: 16px
+							color: #000
+						h6
+							font-size: 2.4em
+							text-transform: uppercase
+							font-weight: 500
+							margin-bottom: 16px
+							color: #000
+						p	
+							font-size: 1.6em
+							text-transform: uppercase
+							color: #000
+
+				&:nth-child(even)
+					background-color: #3a3b00	
+				&:nth-child(odd)
+					background-color: $block-color			
+.translate-left
+	transform: translateX(-500px)
+
 	
 				
 

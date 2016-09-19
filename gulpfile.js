@@ -52,6 +52,7 @@ gulp.task('headersass', function() {
 gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery-ui/jquery-ui.min.js',
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/scroll2id/PageScroll2id.min.js',

@@ -1,10 +1,20 @@
 $(document).ready(function() {
 
-	// $(".drop-list").click( function() {
 
-	// 	$(this).toggleClass("open");
+//  slider
+	setInterval(function() {
+  $(".slide-2").slideToggle(2000);
+  $(".slide-1").slideToggle(2000);
+}, 5000);
 
-	// });
+// --drop-menu
+	$(".drop-list").click( function() {
+
+	$(this).children(".sum-list").slideToggle(300);
+
+	});
+// --end-drop-menu
+
 	// -- Scroll to id
 
 	$("a.scrolldown").mPageScroll2id();
