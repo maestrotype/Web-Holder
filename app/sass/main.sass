@@ -568,6 +568,7 @@ footer
 	padding: 50px	0 40px 0
 	display: flex
 	align-items: center
+	
 	.title-form
 		display: inline-block
 		max-width: 500px
@@ -702,12 +703,19 @@ footer
 			display: flex
 			flex-wrap: wrap
 			justify-content: center
+			.project-left
+				transition-duration: 1s
+				transform: translateX(0px)
 			.project
 				width: 350px
 				position: relative
+				
 				&:hover
 					.hover-project
 						opacity: 1
+						.text
+							transform: translateY(0px)
+							opacity: 1
 
 				.hover-project
 					opacity: 0
@@ -723,6 +731,9 @@ footer
 					transition-duration: 0.5s
 					cursor: pointer
 					.text
+						transition-duration: 0.6s
+						transform: translateY(150px)
+						opacity: 0
 						span
 							display: block
 							font-size: 3.2em
@@ -743,9 +754,234 @@ footer
 					background-color: #3a3b00	
 				&:nth-child(odd)
 					background-color: $block-color			
-.translate-left
-	transform: translateX(-500px)
+// .translate-left
+// 	transform: translateX(0px) !important
+// 	transition-duration: 1s
 
+
+// --Project Page
+.project-view
+	max-width: 1241px
+	margin: 80px auto	
+	position: relative
+	// padding-bottom: 710px
+	min-height: 2266px
+	height: 100%
+	.wrap-image
+		cursor: pointer
+		position: relative
+	.wrap-image-1
+		position: absolute
+		left: 0
+		top: 0
+		box-shadow: 1px	1px 1px $dark-color
+		transform: scale(0.99)
+		transition-duration: 1s
+		.wrap-text
+			position: absolute
+			top: 160px
+			right: -230px
+			width: 320px
+			padding-left: 100px
+			height: 37px
+			.text
+				position: relative
+
+				h6
+					position: absolute
+					right: -50px
+					font-size: 2.8em
+					color: #fff
+					font-weight: 500
+					text-transform: uppercase
+			.border-bottom
+				height: 5px
+				width: 100px
+				display: block
+				background-color: $accent
+				position: absolute
+				top: 31px
+						
+		&:hover
+			z-index: 1
+			transform: scale(1)
+			.wrap-image-2
+				z-index: -1
+			
+	.wrap-image-2
+		position: absolute
+		top: 710px
+		right: 0
+		box-shadow: -1px	-1px 1px $dark-color
+		transform: scale(0.99)
+		transition-duration: 1s
+		.wrap-text
+			position: absolute
+			top: -140px
+			left: 120px
+			width: 320px
+			padding-left: 100px
+			height: 337px
+			.text
+				position: relative
+
+				h6
+					position: absolute
+					right: 0px
+					font-size: 2.8em
+					color: #fff
+					font-weight: 500
+					text-transform: uppercase
+			.border-bottom
+				height: 100px
+				width: 5px
+				display: block
+				background-color: $accent
+				position: absolute
+				top: 31px
+				right: -20px
+		.team
+			position: absolute
+			padding: 46px
+			left: -530px
+			bottom: -118px
+			width: 500px
+			height: 300px
+			background-color: $block-color
+			h6
+				text-transform: uppercase
+				color: $accent
+				font-weight: 500
+				font-size: 3.4em
+				margin-bottom: 52px
+
+			.cut
+				top: -20px
+				right: -20px
+				width: 200px
+				height: 200px
+				border-top: 20px solid $accent
+				border-right: 20px solid $accent
+				border-bottom: none
+				position: absolute
+			.subs
+				margin-top: 30px
+				li
+					position: relative
+					margin-bottom: 20px
+					&:hover
+						&:before
+							transform: rotate(180deg)
+							background: none
+							
+					&:before
+						content: ""
+						position: absolute
+						height: 20px
+						width: 20px
+						display: inline-block
+						background-color: $accent
+						border: 4px solid $accent
+						transition-duration: 0.5s
+					a
+						font-size: 1.6em
+						color: #fff	
+						font-weight: 300
+						padding-left: 40px
+						position: relative
+						&:hover
+							&:after
+								right: -25px	
+
+						&:after
+							content: ""
+							position: absolute
+							top: 5px
+							right: -20px
+							height: 12px
+							width: 12px
+							display: inline-block
+							border-right: 4px solid $accent
+							border-bottom: 4px solid $accent
+							transform: rotate(-45deg)
+							transition-duration: 0.5s
+		&:hover
+			z-index: 1
+			transform: scale(1)
+			.wrap-image-1
+				z-index: -1
+
+	// --One-service page			
+		
+
+.projects
+	margin-top: 80px
+	.title
+		text-align: center
+		h1
+			font-size: 3.4em
+			font-weight: 400
+			text-transform: uppercase
+			color: $accent	
+			margin-bottom: 18px
+		p	
+			font-size: 2em
+			color: #fff
+			font-weight: 300	
+	.project-list
+		margin: 75px auto
+		width: 100%
+		ul
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			li			
+				display: inline-block	
+				margin-bottom: 15px
+				position: relative
+				&:hover
+					.hover-project
+						opacity: 1
+						.text
+							transform: translateY(0px)
+							opacity: 1
+
+				.hover-project
+					opacity: 0
+					position: absolute
+					height: 100%
+					width: 100%
+					background-color: rgba(2,2,2,0.6)
+					z-index: 9
+					top: 0
+					display: flex
+					align-items: end
+					padding: 30px
+					transition-duration: 0.5s
+					cursor: pointer
+					.text
+						transition-duration: 0.6s
+						transform: translateY(58px)
+						opacity: 0
+						display: flex
+						align-items: center
+						justify-content: space-between
+						width: 100%
+						h6
+							font-size: 1.8em
+							text-transform: uppercase
+							color: $accent
+							font-weight: 700
+							display: inline-block
+						span
+							font-size: 3.2em
+							color: $accent		
+							cursor: pointer	
+
+							&.right-arrow	
+								margin-left: 10px
+								transform: rotate(270deg)
+								display: inline-block	
 	
 				
 

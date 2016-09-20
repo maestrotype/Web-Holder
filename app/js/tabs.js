@@ -1,8 +1,8 @@
   $( function() {
     $( "#tabs" ).tabs();
 
-    $("#tabs-2").click( function() {
+    // $("#anhor-2").click( function() {
 
-    	$(".project-left").addClass("translate-left");
-    });
+    // 	$(".project-left").css("transform" : "translateX(0)
+    // });
   } );
