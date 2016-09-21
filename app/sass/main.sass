@@ -616,7 +616,7 @@ footer
 					display: block
 					height: 10px
 					width: 10px
-					right: 30px
+					right: 10px
 					top: 15px
 					border-bottom: 2px solid $accent
 					border-right: 2px solid $accent
@@ -685,17 +685,18 @@ footer
 				background-color: $block-color
 
  // -- portfolio page
-
+// .rotate
+// 	transform: rotateY(360deg)
+// 	width: 25%
 .section-tabs
 	// max-width: 1241px
 	// margin: 0 auto
 	.ui-tabs
 		padding: 0
 		.ui-tabs-nav
-			margin: 0 auto 50px
-			max-width: 320px
+			margin-bottom: 50px
 			display: flex
-
+			justify-content: center
 			.ui-tabs-tab	
 				&.ui-tabs-active
 					a
@@ -718,6 +719,8 @@ footer
 			.project
 				width: 350px
 				position: relative
+				// transform: rotateY(86deg)
+				transition: 1s
 				
 				&:hover
 					.hover-project
