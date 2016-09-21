@@ -189,14 +189,18 @@ header
 									// flex-direction: row
 									li
 										display: inline-block
-										text-transform: uppercase
-										color: #fefefe
-										font-size: 2em
 										cursor: pointer
-										transition-duration: 0.5s
 										margin-right: 25px
-										&:hover,&:active
-											color: $accent				
+										a
+											text-transform: uppercase
+											color: #fefefe
+											font-size: 2em
+											transition-duration: 0.5s
+											&:hover,&:active
+												color: $accent
+												padding-left: 0	
+												&:before
+													display: none			
 										
 			.side-button
 				padding-right: 6.5%

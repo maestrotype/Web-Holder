@@ -364,7 +364,7 @@ footer
 		width: 100%
 		max-width: 500px
 		min-height: 400px
-		padding: 58px 40px 66px 40px
+		padding: 58px 40px 66px 20px
 		display: inline-block
 		margin: 80px auto 
 		.cut
@@ -485,7 +485,7 @@ footer
 	.services-block
 		max-width: 500px
 		background-color: $block-color
-		height: 400px
+		min-height: 400px
 		display: inline-block
 		position: relative
 		padding-left: 37px
@@ -683,6 +683,22 @@ footer
 			&:hover
 				color: $accent
 				background-color: $block-color
+
+		.file-upload
+			width: 50%
+			display: flex
+			align-items: center
+			display: inline-block
+			input[type=file]
+				opacity: 0
+			mark
+				background: none
+				font-size: 1.6em
+				color: $accent
+				font-weight: 300
+				cursor: pointer
+
+
 
  // -- portfolio page
 // .rotate

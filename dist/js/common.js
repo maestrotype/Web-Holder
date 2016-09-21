@@ -32,13 +32,13 @@ $(document).ready(function() {
 	// --EndAddText
 
 	
-	$("#title-left").animated("bounceInLeft", "fadeOut");
+	$("#title-left").animated("fadeInLeft", "fadeOut");
 
-	$("#title-right").animated("bounceInRight", "fadeOut");
+	$("#title-right").animated("fadeInRight", "fadeOut");
 
-	$("#left-block").animated("bounceInLeft", "fadeOut");
+	$("#left-block").animated("fadeInLeft", "fadeOut");
 
-	$("#right-block").animated("bounceInRight", "fadeOut");
+	$("#right-block").animated("fadeInRight", "fadeOut");
 
 	// --click-menu
 
