@@ -26,7 +26,9 @@
 	/**/
 	
 	// script[src*=js/scroll.js]	
-
+	.fixed
+		position: static
+		
 	.scrolldown
 		display: none
 	
@@ -65,9 +67,17 @@
 
 	.header-services .slider .nav-services ul li span:nth-child(2)
 		display: none
-
+	
+	header.header-our-team, header.header-our-team .viewport-our-team
+		background-color: $dark-color
 	.header-home-page
 		background: url(../img/background.png) center top no-repeat
+	
+	header .title
+		margin-bottom: 0
+
+	.person-team
+		margin: 0 auto 80px
 
 	.wrapper .process,.who-we-are
 		height: 100%

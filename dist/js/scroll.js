@@ -66,7 +66,7 @@ $(window).scroll(function() {
 		var st = $(this).scrollTop();
 		// console.log(st);
 		
-		if(st > 1400) {
+		if(st > $(".wrapper").height() - $("header").height()) {
 			 
 			$(".wrapper").css({
 			"bottom" : 294		
