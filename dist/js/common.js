@@ -3,8 +3,8 @@ $(document).ready(function() {
 
 //  slider
 	setInterval(function() {
-  $(".slide-2").slideToggle(2000);
-  $(".slide-1").slideToggle(2000);
+  $("#slide-2").slideToggle(2000);
+  $("#slide-1").slideToggle(2000);
 }, 5000);
 
 // --drop-menu
@@ -32,13 +32,13 @@ $(document).ready(function() {
 	// --EndAddText
 
 	
-	$("#title-left").animated("fadeInLeft", "fadeOut");
+	$("#title-left").animated("bounceInLeft", "fadeOut");
 
-	$("#title-right").animated("fadeInRight", "fadeOut");
+	$("#title-right").animated("bounceInRight", "fadeOut");
 
-	$("#left-block").animated("fadeInLeft", "fadeOut");
+	$("#left-block").animated("bounceInLeft", "fadeOut");
 
-	$("#right-block").animated("fadeInRight", "fadeOut");
+	$("#right-block").animated("bounceInRight", "fadeOut");
 
 	// --click-menu
 
