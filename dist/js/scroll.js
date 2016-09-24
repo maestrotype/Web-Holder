@@ -62,11 +62,13 @@ $(document).ready( function () {
 				
 
 $(window).scroll(function() {
-			
-		var st = $(this).scrollTop();
-		// console.log(st);
 		
-		if(st > $(".wrapper").height() - $("header").height()) {
+
+		var st = $(this).scrollTop();
+		console.log(getCoords(document.querySelector(".wrapper")).bottom);
+		console.log(st);
+		// console.log($(".wrapper").height() - $("header").height());	
+		if(st > (getCoords(document.querySelector(".wrapper")).bottom) - $(".wrapper").height()) {
 			 
 			$(".wrapper").css({
 			"bottom" : 294		
@@ -121,10 +123,12 @@ function getCoords(e) {
   // (4)
   var top = box.top + scrollTop - clientTop;
   var left = box.left + scrollLeft - clientLeft;
+  var bottom = box.bottom + scrollTop - clientTop;
 
   return {
     top: top,
-    left: left
+    left: left,
+    bottom: bottom
   };
 }		
 
@@ -138,6 +142,7 @@ var topCoordSectionThree = getCoords(sectionThree).top;
 var sectionFour = document.getElementById("four");
 var topCoordSectionFour = getCoords(sectionFour).top;
 
-
+// var wrapper = document.getElementById("wrap");
+// var cordwrap = getCoords(document.getElementById("wrap")).top;
 
 });

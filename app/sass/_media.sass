@@ -27,8 +27,8 @@
 	
 	// script[src*=js/scroll.js]	
 	.fixed
-		position: static
-		
+		position: fixed
+
 	.scrolldown
 		display: none
 	
@@ -149,18 +149,13 @@
 	.project-view .wrap-image-1 img, .project-view .wrap-image-2 img
 			max-width: 360px
 
-
-
-	footer
-		position: static
-		height: 100%
-
-	.wrapper
-		position: static
+	// .wrapper
+	// 	position: static
 	
-	.wrapper footer
+	footer
 		position: relative
-		z-index: 1	
+		z-index: -1	
+		height: 316px
 
 	footer .inner-footer
 		position: static
@@ -212,12 +207,9 @@
 		min-height: 210px
 	.start
 		margin-left: 0px
-	.wrapper
-		position: static
+	// .wrapper
+	// 	position: static
 	
-	.wrapper footer
-		position: relative
-		z-index: 1
 	
 	.web-section
 		flex-wrap: wrap
@@ -242,7 +234,7 @@
 		right: 0	
 
 	.services-form .form .wrap-input .wrap-select select
-		margin-left: 0	
+		margin-left: 18px	
 	
 	.process .side-block .block .cut, .who-we-are .side-block .block .cut
 		top: -20px
