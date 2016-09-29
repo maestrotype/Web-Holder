@@ -29,6 +29,18 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$(".addText").click( function() {
+		$(this).prev().toggleClass("full-text");
+		$(this).hide();
+		// $(this).toggle( function() {
+		// 		$(this).html("close");
+		// },
+		// 		function() {
+		// 		$(this).html("Learn more");
+		// }
+		// );
+		return false;
+	});
 	// --EndAddText
 
 	
