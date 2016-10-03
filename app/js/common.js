@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
+var height = $(".wrap-image-2").height() + 750;
 
+$(".project-view").css("height", height);
 //  slider
 	setInterval(function() {
   $("#slide-2").slideToggle(2000);

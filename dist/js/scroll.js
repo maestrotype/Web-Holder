@@ -74,6 +74,9 @@ $(window).scroll(function() {
 			"bottom" : 294		
 		});
 		} else  {
+			$("header").css({
+				"bottom" : 0		
+				});
 			$(".wrapper").css({
 			"bottom" : 0		
 			// "transform" : "translate(0%, " + -flag*st/4 + "px" 
